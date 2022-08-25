@@ -35,7 +35,7 @@ img {
     align-items: center;
     line-height: 1rem;
     overflow: hidden;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
     background-color: white;
 }
 
@@ -82,10 +82,17 @@ img {
 
 /* Cover Photo */
 
-.coverphoto{
+.coverphoto {
+    margin-top: 0;
     width: 100%;
-    height: 400px;
+    height: 350px;
     overflow: hidden;
+    position: relative;
+}
+
+.textbox {
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 /* Gallery page */
@@ -130,6 +137,10 @@ img {
     .nav-item {
         flex: 1 0 10%;
     }
+    .coverphoto-photo {
+        position: absolute;
+        bottom: -30px;
+    }
 }
 
 @media (min-width:900px) {
@@ -140,4 +151,5 @@ img {
     .nav-menu {
         width: auto;
     }
+
 }
