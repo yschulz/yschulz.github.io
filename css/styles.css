@@ -102,6 +102,13 @@ img {
     padding: 0 1rem 10rem 1rem;
 }
 
+.gallery-container-magazine {
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(300px, 1fr));
+
+    grid-gap: 0.5rem;
+}
+
 .gallery-container {
     display: grid;
     grid-template-columns:  repeat(auto-fit, minmax(300px,1fr));
@@ -125,6 +132,10 @@ img {
     transition: 0.5s ease-in-out;
 }
 
+.w-1, .w-2 {
+    grid-column: span 1;
+}
+
 @media (min-width:600px) {
     .header-nav {
         line-height: 1.5rem;
@@ -140,6 +151,10 @@ img {
     .coverphoto-photo {
         position: absolute;
         bottom: -30px;
+    }
+
+    .w-2 {
+        grid-column: span 2;
     }
 }
 
