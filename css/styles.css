@@ -1,3 +1,4 @@
+/* standard additions */
 *, *::before, *::after {
     box-sizing: inherit;
 }
@@ -24,11 +25,8 @@ img {
     display: block;
 }
 
-/*
-.inline-a {
-    text-decoration: none;
-}
-*/
+
+/* navigation panel */
 
 .header-nav {
     display: flex;
@@ -80,6 +78,20 @@ img {
 .nav-menu a:hover {
     transform: scale(1.2);
     border-bottom: 1px solid #2A65DE;
+}
+
+/* Gallery page */
+
+
+.gallery-page {
+    padding: 0 1rem 10rem 1rem;
+}
+
+gallery-container {
+    display: grid;
+    grid-template-columns:  repeat(300px, 1fr);
+    grid-auto-rows: 300px;
+    grid-gap: 0.5rem;
 }
 
 @media (min-width:600px) {
