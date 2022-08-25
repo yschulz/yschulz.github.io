@@ -87,11 +87,27 @@ img {
     padding: 0 1rem 10rem 1rem;
 }
 
-gallery-container {
+.gallery-container {
     display: grid;
-    grid-template-columns:  repeat(300px, 1fr);
+    grid-template-columns:  repeat(auto-fit, minmax(300px,1fr));
     grid-auto-rows: 300px;
     grid-gap: 0.5rem;
+}
+
+.gallery-item {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-img:hover {
+    transform: scale(1.2);
+    transition: 0.5s ease-in-out;
 }
 
 @media (min-width:600px) {
