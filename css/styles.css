@@ -80,6 +80,14 @@ img {
     border-bottom: 1px solid #2A65DE;
 }
 
+/* Cover Photo */
+
+.coverphoto{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
 /* Gallery page */
 
 
