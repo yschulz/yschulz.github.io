@@ -49,6 +49,25 @@ img {
     position: relative;
 }
 
+/* About page */
+
+.about-page {
+    padding: 2rem 1rem 10rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    grid-gap: 10rem;
+}
+
+.about-text {
+    margin: 0 auto;
+}
+
+.about-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
 /* navigation panel */
 
 .header-nav {
@@ -129,12 +148,6 @@ img {
 .gallery-page {
     padding: 0 1rem 10rem 1rem;
 }
-
-/* .gallery-container-magazine {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-gap: 2rem;
-} */
 
 .gallery-container {
     min-height: 100vh;
