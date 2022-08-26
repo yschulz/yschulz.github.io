@@ -8,15 +8,16 @@ html {
     font-size:100%;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5rem;
+    scroll-snap-type: y proximity;
 }
 
 body {
     background-color: lightgray;
-
     max-width: 1400px;
     margin: 0 auto;
     padding: 0;
     min-height: 100vh;
+    /* overflow: hidden; */
 }
 
 img {
@@ -25,6 +26,11 @@ img {
     display: block;
 }
 
+.scroll-section {
+    scroll-snap-align: start;
+    height: minmax(100vh,auto);
+    position: relative;
+}
 
 /* navigation panel */
 
@@ -90,36 +96,45 @@ img {
     position: relative;
 }
 
+.coverphoto-photo {
+    position: absolute;
+    bottom: -30px;
+}
+
+/* Gallery page */
+
 .textbox {
     margin-top: 50px;
     margin-bottom: 20px;
 }
 
-/* Gallery page */
-
-
 .gallery-page {
     padding: 0 1rem 10rem 1rem;
 }
 
-.gallery-container-magazine {
+/* .gallery-container-magazine {
     display: grid;
-    grid-template-columns:  repeat(auto-fit, minmax(300px, 1fr));
-
-    grid-gap: 0.5rem;
-}
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 2rem;
+} */
 
 .gallery-container {
+    min-height: 100vh;
     display: grid;
-    grid-template-columns:  repeat(auto-fit, minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
     grid-auto-rows: 300px;
-    grid-gap: 0.5rem;
+    grid-gap: 2rem;
+}
+
+.magazine {
+    grid-auto-rows: auto;
 }
 
 .gallery-item {
     height: 100%;
     width: 100%;
     overflow: hidden;
+    background-color: white;
 }
 
 .gallery-img {
@@ -147,10 +162,6 @@ img {
 
     .nav-item {
         flex: 1 0 10%;
-    }
-    .coverphoto-photo {
-        position: absolute;
-        bottom: -30px;
     }
 
     .w-2 {
