@@ -68,6 +68,35 @@ video {
 
 /* landing page */
 
+.landing-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 0;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.video-box {
+    height: 100vh;
+    max-width: 100%;
+    display: grid;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    overflow: hidden;
+}
+
+.video-box::after {
+    content: "";
+    background-color: rgba(0,0,0, .3);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .landing-video {
     width: 100%;
     height: 100%;
@@ -79,7 +108,7 @@ video {
 }
 
 .landing-container {
-    width: 1000px;
+    max-width: 1000px;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
@@ -92,24 +121,20 @@ video {
     justify-content: center;
 }
 
-.landingnav-menu {
-    display: flex;
-    justify-content: center;
-}
-
 .w-3 {
     grid-column: span 3;
     justify-self: center;
 }
 
 .landing-nav {
+    display: grid;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
     width: 100%;
+    height: 130px;
     margin-top: 400px;
-    position: sticky;
-    z-index: 100;
+    z-index: 10;
     line-height: 1rem;
-    overflow: hidden;
-    margin-bottom: 0;
     background-color: #4e65b3;
     box-shadow: 0 1px 25px rgba(0,0,0, .1);
 }
