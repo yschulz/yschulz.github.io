@@ -101,7 +101,12 @@ video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background-image: url(https://media.githubusercontent.com/media/yschulz/yschulz.github.io/dev/video/yannick-schulz-hot-lap-first-frame.png);
+    background-color: #cccccc;
+    background-image: url("https://media.githubusercontent.com/media/yschulz/yschulz.github.io/dev/video/yannick-schulz-hot-lap-first-frame.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
 }
 
 .landing-body {
