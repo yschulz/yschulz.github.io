@@ -1,0 +1,367 @@
+/* standard additions */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size:100%;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5rem;
+    scroll-snap-type: y proximity;
+}
+
+header {
+    max-width: 1400px;
+}
+
+#site-header {
+    position: fixed;
+    height: 300px;
+    top: 0;
+	width: 100%;
+	z-index: 100;
+	transition: all .3s ease;
+}
+
+#site-header.hide {
+	top: -150px;
+}
+
+.body-page {
+    background-color: lightgray;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+    min-height: 100vh;
+    /* overflow: hidden; */
+}
+
+img {
+    width: 100%;
+    height: auto;
+    /* display: block; */
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.page-heading h1 {
+    padding: 2rem 5rem 2rem 5rem;
+    font-size: 48pt;
+    font-family: oswaldregular;
+    color: rgb(80, 80, 80);
+}
+
+.scroll-section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    position: relative;
+}
+
+.content-color {
+    background-color: white;
+}
+
+/* landing page */
+
+.landing-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 0;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.video-box {
+    height: 100vh;
+    max-width: 100%;
+    display: grid;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    overflow: hidden;
+}
+
+.video-box::after {
+    content: "";
+    background-color: rgba(0,0,0, .3);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.landing-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #cccccc;
+    background-image: url("https://media.githubusercontent.com/media/yschulz/yschulz.github.io/dev/video/yannick-schulz-hot-lap-first-frame.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.landing-body {
+    margin: 0 0 0 0;
+}
+
+.landing-container {
+    max-width: 1000px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    /* justify-content: center; */
+
+}
+
+.landingh-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.w-3 {
+    grid-column: span 3;
+    justify-self: center;
+}
+
+.landing-nav {
+    display: grid;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    width: 100%;
+    height: 130px;
+    margin-top: 400px;
+    z-index: 10;
+    line-height: 1rem;
+    background-color: #4e65b3;
+    box-shadow: 0 1px 25px rgba(0,0,0, .1);
+}
+
+/* navigation panel */
+
+.header-offset {
+    padding-top: 123px;
+}
+
+.header-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    line-height: 1rem;
+    overflow: hidden;
+    margin-bottom: 0;
+    /* background-color: #2A65DE; */
+    background-color: #4e65b3;
+    box-shadow: 0 1px 25px rgba(0,0,0, .1);
+}
+
+.h-nav, .nav-menu {
+    text-transform: uppercase;
+}
+
+.nav-menu{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item{
+    flex: 1 0 10%;
+    text-align: center;
+}
+
+
+.nav-menu a, .h-nav a{
+    display: block;
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+    padding: 0.8rem;
+    /* color: #2A65DE; */
+    color: white;
+}
+
+.nav-menu a {
+    transition: all ease-in-out .35s;
+}
+
+.nav-menu a:hover {
+    transform: scale(1.2);
+    border-bottom: 1px solid white;
+}
+
+
+/* About page */
+
+.about-page {
+    padding: 5rem 3rem 10rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+    grid-gap: 5rem;
+}
+
+.about-text {
+    margin: 0 auto;
+}
+
+.about-text p {
+    font-style: italic;
+    font-size: 16pt;
+    text-align: center;
+    line-height: 30pt;
+}
+
+.about-image {
+    /* border-collapse: separate; */
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.about-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Cover Photo */
+
+.coverphoto {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    /* height: 100%; */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Gallery page */
+
+.first-element {
+    min-height: 70vh;
+}
+
+.textbox {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.gallery-page {
+    margin-top: 0;
+    padding: 0 1rem 10rem 1rem;
+}
+
+.gallery-container {
+    /* min-height: 100vh; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    grid-auto-rows: 300px;
+    grid-gap: 2rem;
+}
+
+.magazine {
+    grid-auto-rows: auto;
+}
+
+.gallery-item {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+}
+
+.gallery-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-img:hover {
+    transform: scale(1.2);
+    transition: 0.5s ease-in-out;
+}
+
+.w-1, .w-2 {
+    grid-column: span 1;
+}
+
+@media (max-width:490px) {
+    .header-offset {
+        padding-top: 164px;
+    }
+}
+
+@media (min-width:600px) {
+    .header-offset {
+        padding-top: 139;
+    }
+
+    .header-nav {
+        padding: 0 2rem 0 2rem ;
+        line-height: 1.5rem;
+    }
+
+    .nav-menu {
+        width: 100%;
+    }
+
+    .nav-item {
+        flex: 1 0 10%;
+    }
+
+    .w-2 {
+        grid-column: span 2;
+    }
+
+    .coverphoto {
+        height: 350px;
+    }
+
+    .coverphoto img {
+        position: absolute;
+        bottom: -30px;
+    }
+}
+
+@media (min-width:900px) {
+    .about-page {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .textbox {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .header-offset {
+        padding-top: 89px;
+    }
+
+    .header-nav {
+        justify-content: space-between;
+        
+    }
+
+    .nav-menu {
+        width: auto;
+    }
+}
+
+@font-face {
+    font-family: 'oswaldregular';
+    src: url('../fonts/oswald-variablefont_wght-webfont.woff2') format('woff2'),
+         url('../fonts/oswald-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
