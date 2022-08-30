@@ -246,6 +246,43 @@ video {
     position: relative;
 }
 
+/* Blog top level page */
+
+.blogtop-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
+    grid-auto-rows: 700px;
+    grid-gap: 2rem;
+}
+
+.blogtop-container a {
+    text-decoration: none;
+}
+
+.blogtop-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-gap: 1rem;
+    background-color: white;
+    box-shadow: 0 1px 25px rgba(0,0,0, .1);
+}
+
+.blogtop-item-img {
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.blogtop-item-text {
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.blogtop-item-text h2 {
+    text-decoration: none;
+}
+.blogtop-item-text p {
+    text-decoration: none;
+}
+
 /* Gallery page */
 
 .first-element {
