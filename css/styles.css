@@ -328,6 +328,12 @@ video {
     text-decoration: none;
 }
 
+.blog-floating-media {
+    max-width: 20%;
+    max-height: 100;
+    float: right;
+}
+
 /* Gallery page */
 
 .first-element {
