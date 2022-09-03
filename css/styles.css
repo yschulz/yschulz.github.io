@@ -49,6 +49,20 @@ video {
     display: block;
 }
 
+.page-heading-single {
+    padding: 2rem 5rem 2rem 5rem;
+    font-size: 48pt;
+    font-family: oswaldregular;
+    color: rgb(80, 80, 80);   
+}
+
+.page-heading h1 {
+    padding: 2rem 5rem 2rem 5rem;
+    font-size: 48pt;
+    font-family: oswaldregular;
+    color: rgb(80, 80, 80);   
+}
+
 .page-heading h1 {
     padding: 2rem 2rem 2rem 2rem;
     font-size: 40pt;
@@ -245,6 +259,37 @@ video {
     overflow: hidden;
     position: relative;
 }
+/* Blog individual page */
+
+.blog-add {
+    position: relative;
+}
+
+.top-comment {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.blog-nav {
+    padding: 1rem 1rem 1rem 1rem;
+    background-color: white;
+    border: 3px solid black;
+    min-width: 300px;
+    max-width:500px;
+    box-shadow: 10px 10px 20px rgba(0,0,0, .2);
+}
+
+.blog-nav-menu {
+    list-style: decimal;
+}
+
+.blog-nav-menu a {
+    text-decoration: none;
+    color: black;
+}
+
 
 /* Blog top level page */
 
@@ -338,6 +383,13 @@ video {
     }
 }
 
+@media (min-width:1700px) {
+    .blog-nav {
+        position: fixed;
+        transform: translateX(-110%);
+    }   
+}
+
 @media (min-width:600px) {
     .scroll-section {
         scroll-snap-align: start;
@@ -384,6 +436,11 @@ video {
 }
 
 @media (min-width:900px) {
+    .top-comment {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+
     .body-page {
         background-color: lightgray;
     }
