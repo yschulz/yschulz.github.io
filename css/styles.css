@@ -265,6 +265,15 @@ video {
     position: relative;
 }
 
+.blog-section {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.blog-section-two {
+    padding-bottom: 1rem;
+}
+
 .top-comment {
     padding-top: 2rem;
     padding-bottom: 1rem;
@@ -296,9 +305,7 @@ video {
 }
 
 .blog-floating-media {
-    width: 400px;
-    margin: 1rem;
-    float: none;
+    width: 100%;
 }
 
 .blog-pic-row {
@@ -413,7 +420,9 @@ video {
 
 @media (min-width:600px) {
     .blog-floating-media {
+        margin: 1rem;
         float: right;
+        width: 400px;
     }
 
     .scroll-section {
