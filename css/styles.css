@@ -50,24 +50,10 @@ video {
 }
 
 .page-heading-single {
-    padding: 2rem 5rem 2rem 5rem;
-    font-size: 48pt;
-    font-family: oswaldregular;
-    color: rgb(80, 80, 80);   
-}
-
-.page-heading h1 {
-    padding: 2rem 5rem 2rem 5rem;
-    font-size: 48pt;
-    font-family: oswaldregular;
-    color: rgb(80, 80, 80);   
-}
-
-.page-heading h1 {
     padding: 2rem 2rem 2rem 2rem;
     font-size: 40pt;
     font-family: oswaldregular;
-    color: rgb(80, 80, 80);
+    color: rgb(80, 80, 80);   
 }
 
 .scroll-section {
@@ -454,6 +440,11 @@ video {
 
     .scroll-section {
         scroll-snap-align: start;
+    }
+
+    .page-heading-single {
+        padding: 2rem 5rem 2rem 5rem;
+        font-size: 48pt;
     }
     
     .page-heading h1 {
