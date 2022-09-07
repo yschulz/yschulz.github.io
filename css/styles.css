@@ -312,7 +312,7 @@ video {
 
 .blogtop-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     grid-auto-rows: auto;
     grid-gap: 2rem;
 }
@@ -429,6 +429,10 @@ video {
 }
 
 @media (min-width:600px) {
+    .blogtop-container {
+        grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
+    }
+
     .blogtop-item {
         grid-template-rows: 2fr 1fr;
     }
